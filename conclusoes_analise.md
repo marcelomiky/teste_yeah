@@ -1,0 +1,5 @@
+Os conjuntos de dados são extensos e requer uma engenharia de feature bem feita para não onerar os modelos nos treinamentos. Foi adotado um PCA com 5 componentes principais. Para uma análise mais aprofundada, recomenda-se verificar com valores superiores de que forma impacta nas acurácias dos modelos. 
+
+Os algoritmos Decision Trees e SVM obtiveram os melhores resultados, ambos empatando com 87% de acurácia. Dado que o SVM é um algoritmo custoso, recomenda-se utilizar o Decision Trees.
+
+Para um estudo mais aprofundado, recomenda-se aumentar o número de *folds* na validação cruzada, além de otimizar os hyperparâmetros de todos os modelos para verificar se o modelo consegue uma melhor generalização para exemplos nunca vistos antes (conjunto de teste). Para esta otimização dos hyperparâmetros, pode-se dividir o conjunto de dados em 3: treino, validação e teste. Obtém os melhores hyperparâmetros com o conjunto de validação e depois aplicam estes hyperparâmetros no conjunto de treino e avalia o modelo com o de teste. 
